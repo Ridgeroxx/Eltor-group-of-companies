@@ -1,0 +1,662 @@
+/* styles.css */
+/* Header Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #6b9aca;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;                                
+}
+
+header h1 {
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+.home {
+    padding: 0;
+  }
+  
+  .home .slide {
+    display: none;
+    height: calc(100vh - 8rem);
+  }
+  
+  .home .slide.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .home .slide .content {
+    width: 50%;
+    padding: 2rem 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background: #fce9f2;
+    position: relative;
+  }
+  
+  .home .slide .content img {
+    height: 25rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+    -webkit-animation: fadeUp .2s linear backwards .2s;
+            animation: fadeUp .2s linear backwards .2s;
+    display: none;
+  }
+  
+  .home .slide .content span {
+    color: #e84393;
+    display: block;
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    -webkit-animation: fadeUp .2s linear backwards .4s;
+            animation: fadeUp .2s linear backwards .4s;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .home .slide .content h3 {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    color: #222;
+    animation: slideIn 2s ease-in-out forwards;
+  }
+  
+  .home .slide .content .btn {
+    -webkit-animation: fadeUp .2s linear backwards .8s;
+            animation: fadeUp .2s linear backwards .8s;
+  }
+  
+  .home .slide .content .controls {
+    position: absolute;
+    bottom: 12%;
+    right: -7rem;
+  }
+  
+  .home .slide .content .controls div {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 3rem;
+    background: #fff;
+    color: #222;
+    margin: 0 1rem;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .home .slide .content .controls div:hover {
+    background: #e84393;
+    color: #fff;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  
+  .home .slide .image {
+    width: 50%;
+  }
+  
+  .home .slide .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  } 
+
+  @media screen and (max-width: 768px) {
+    .home .slide .content {
+      width: 100%;
+      padding: 2rem;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-align: center;
+    }
+  
+    .home .slide .content img {
+      display: block; /* Show the small image */
+      max-width: 80%; /* Adjust the size of the small image */
+      border-radius: 50%; /* Make the small image round */
+      margin: 0 auto 2rem; /* Center the small image vertically and horizontally */
+    }
+  
+    .home .slide .content .controls {
+      position: relative;
+      bottom: initial;
+      right: initial;
+      margin-top: 2rem; /* Adjust spacing between controls and small image */
+    }
+  }
+
+  
+  
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+li {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.social-media-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.social-media-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.social-media-card i {
+    font-size: 40px;
+    color: #555;
+}
+
+.social-media-card p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Add hover animation */
+.social-media-card:hover {
+    transform: translateY(-10px);
+}
+
+#gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.image-item {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+}
+
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+
+.featured-books {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    gap: 20px;
+}
+
+.book-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.book-card h3 {
+    margin-top: 10px;
+}
+
+.book-card p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.price {
+    color: #27ae60;
+}
+
+.quantity {
+    color: #3498db;
+}
+
+.description {
+    color: #555;
+}
+
+
+.testimonial-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.testimonials {
+    display: flex;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the entire circular area */
+    margin-bottom: 10px; /* Optional: Add some space below the image */
+}
+
+
+
+/* Style the navigation dots */
+.navigation-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styles for the overlay/modal */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hide by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#cart-icon {
+    margin-left: auto; /* Move the cart icon to the right */
+}
+
+#cart-icon a {
+    display: flex;
+    align-items: center; /* Align the icon and count vertically */
+    text-decoration: none;
+    color: inherit;
+}
+
+#cart-icon i {
+    margin-right: 5px;
+}
+
+
+#cart-icon img {
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.bag-icon {
+    font-size: -1rem; /* Adjust the font size as needed */
+    margin-top: 5px; /* Adjust the top margin to align it vertically with the navbar */
+}
+
+.bag-icon svg {
+    width: 20px; /* Adjust the width of the SVG */
+    height: 20px; /* Adjust the height of the SVG */
+    margin-top: 5px; /* Adjust the top margin to align it vertically with the navbar */
+}
+
+
+#cart-count {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CSS to style the cart modal and hide it initially */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Style for the pop-up cart container */
+.cart-popup {
+    position: fixed;
+    top: 50px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+    padding: 10px;
+}
+
+/* Style for the cart footer */
+.cart-footer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Style for the empty cart message */
+.empty-cart-message {
+    display: none;
+    color: #999;
+    font-style: italic;
+}
+
+/* Style for the proceed to checkout button */
+#proceed-to-checkout {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Additional CSS for product cards, buttons, etc. */
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* CSS for larger screens (laptops, desktops) */
+@media screen and (min-width: 768px) {
+    .logo img {
+        width: 100px; /* Adjust the width for larger screens */
+    }
+}
+
+/* CSS for smaller screens (mobile devices) */
+@media screen and (max-width: 767px) {
+    .logo img {
+        width: 130px !important; /* Adjust the width for smaller screens */
+    }
+ 
+
+
+    html {
+        font-size: 55%;
+     }
+      .header {
+        padding: 1.5rem 2rem;
+      }
+      section {
+        padding: 3rem 2rem;
+      }
+      .home .slide {
+        position: relative;
+        height: calc(100vh - 6rem);
+      }
+      .home .slide .content {
+        padding: 2rem;
+        position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.7);
+      height: 100%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      }
+      .home .slide .content span {
+        font-size: 2rem;
+      }
+      .home .slide .content h3 {
+        font-size: 4rem;
+      }
+      .home .slide .content img {
+        display: inline-block;
+      }
+      .home .slide .content .controls {
+        position: static;
+        margin-top: 7rem;
+      }
+      .home .slide .content .controls div {
+        margin: 0 .5rem;
+      }
+      .home .slide .image {
+        width: 100%;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+}
+
+
+
+  
+  
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .featured-books {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-rows: auto; /* Auto rows */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .featured-books {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+
